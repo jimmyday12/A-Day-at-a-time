@@ -25,15 +25,6 @@ date_format = "Jan 2006"
   date_start = "2020-06-01"
   date_end = ""
   description = ""
-
-[[experience]]
-  title = "Senior Project Manager"
-  company = "Fusion Sport"
-  company_url = "www.fusionsport.com"
-  location = "Australia"
-  date_start = "2019-06-01"
-  date_end = "2020-05-01"
-  description = "Responsible for the planning and overseeing of various cross-functional development projects to ensure they were completed in a timely fashion and within budget."
   
 [[experience]]
   title = "Manager of Research and Analytics"
@@ -41,17 +32,17 @@ date_format = "Jan 2006"
   company_url = "www.fusionsport.com"
   location = "Australia"
   date_start = "2016-07-01"
-  date_end = "2019-06-01"
+  date_end = ""
   description = "Leading a small team to conduct internal and external research and analytics to assist the development of various new R&D projects at Fusion Sport"
-  
+
 [[experience]]
-  title = "Research Consultant (Biomechanics and Data Analytics)"
+  title = "Senior Project Manager"
   company = "Fusion Sport"
   company_url = "www.fusionsport.com"
   location = "Australia"
-  date_start = "2014-07-01"
-  date_end = "2016-06-01"
-  description = "Research into various new technologies and processes as part of the R&D arm of fusion sport. Including wearables technology, data analytics tools and analyses techniques for existing products."
+  date_start = "2016-07-01"
+  date_end = "2020-05-01"
+  description = "Responsible for the planning and overseeing of various cross-functional development projects to ensure they were completed in a timely fashion and within budget."
 
 [[experience]]
   title = "Sports Science Consultant"
@@ -59,8 +50,8 @@ date_format = "Jan 2006"
   company_url = "www.fusionsport.com"
   location = "Australia"
   date_start = "2011-01-01"
-  date_end = "2014-07-01"
-  description = "Working with clients to implement various sports science tools such as an Athlete Management System across their organisations"
+  date_end = "2016-06-01"
+  description = "Working closely with clients on the development and implementation of various sports science tools such as an Athlete Management Systems"
 
 
 [[experience]]
