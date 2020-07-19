@@ -5,7 +5,7 @@
     <link>/category/r/</link>
       <atom:link href="/category/r/index.xml" rel="self" type="application/rss+xml" />
     <description>R</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 23 Jul 2015 21:13:14 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 15 Aug 2018 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>R</title>
@@ -13,51 +13,84 @@
     </image>
     
     <item>
-      <title>Hello R Markdown</title>
-      <link>/post/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      <guid>/post/2015-07-23-r-rmarkdown/</guid>
+      <title>fitzRoy - 0.1.5 release</title>
+      <link>/post/fitzroy-0-1-5-release/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>/post/fitzroy-0-1-5-release/</guid>
       <description>
 
 
-&lt;div id=&#34;r-markdown&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;R Markdown&lt;/h1&gt;
-&lt;p&gt;This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34; class=&#34;uri&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;You can embed an R code chunk like this:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(cars)
-##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00
-fit &amp;lt;- lm(dist ~ speed, data = cars)
-fit
-## 
-## Call:
-## lm(formula = dist ~ speed, data = cars)
-## 
-## Coefficients:
-## (Intercept)        speed  
-##     -17.579        3.932&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;including-plots&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Including Plots&lt;/h1&gt;
-&lt;p&gt;You can also embed plots. See Figure &lt;a href=&#34;#fig:pie&#34;&gt;1&lt;/a&gt; for example:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mar = c(0, 1, 0, 1))
-pie(
-  c(280, 60, 20),
-  c(&amp;#39;Sky&amp;#39;, &amp;#39;Sunny side of pyramid&amp;#39;, &amp;#39;Shady side of pyramid&amp;#39;),
-  col = c(&amp;#39;#0292D8&amp;#39;, &amp;#39;#F7EA39&amp;#39;, &amp;#39;#C4B632&amp;#39;),
-  init.angle = -50, border = NA
-)&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:pie&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/2015-07-23-r-rmarkdown_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;
-Figure 1: A fancy pie chart.
-&lt;/p&gt;
-&lt;/div&gt;
+&lt;p&gt;For those of you who’ve been following me on Twitter, you’ll know that I’ve been working on an R package for AFL called &lt;a href=&#34;jimmyday12.github.io/fitzRoy&#34;&gt;fitzRoy&lt;/a&gt; with Rob from &lt;a href=&#34;jimmyday12.github.io/fitzRoy&#34;&gt;Analysis of AFL&lt;/a&gt;. Today we released a new version which has a much requested feature, so I’d figured a blog post was in order.&lt;/p&gt;
+&lt;p&gt;You’ll have to reinstall fitzRoy to get the latest functions. We still aren’t on CRAN but you can use devtools to get it.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# install.packages(&amp;quot;devtools&amp;quot;) # uncomment if you haven&amp;#39;t installed devtools before
+devtools::install_github(&amp;quot;jimmyday12/fitzRoy&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;afl-tables-player-stats&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;AFL Tables player stats&lt;/h2&gt;
+&lt;p&gt;Our initial version of fitzRoy had some data included in it from a data dump we got from Paul at &lt;a href=&#34;afltables.com&#34;&gt;AFLtables&lt;/a&gt;. This data was great as it had a all of the afltables stats on a player by player basis for all time. While this was ok for historical analysis, it stopped at round 3, 2017 and it was a one off dump meaning we couldn’t keep it up to date.&lt;/p&gt;
+&lt;p&gt;As such, we’ve written a new function to replace this internal data. It’s called &lt;code&gt;get_afltables_stats&lt;/code&gt;. It takes two arguments &lt;code&gt;start_date&lt;/code&gt; and &lt;code&gt;end_date&lt;/code&gt;. These are pretty self explanatory - the function will return stats from all matches between &lt;code&gt;start_date&lt;/code&gt; and &lt;code&gt;end_date&lt;/code&gt;. The format of these inputs needs to be either dmy or ymd.&lt;/p&gt;
+&lt;p&gt;Both arguments are optional. &lt;code&gt;start_date&lt;/code&gt; will default to the first AFL game &lt;code&gt;end_date&lt;/code&gt; will default to the System Date.&lt;/p&gt;
+&lt;p&gt;As an example, we could just grab data from this year.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(fitzRoy)
+library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ── Attaching packages ───────────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ✓ ggplot2 3.3.1     ✓ purrr   0.3.4
+## ✓ tibble  3.0.1     ✓ dplyr   0.8.5
+## ✓ tidyr   1.1.0     ✓ stringr 1.4.0
+## ✓ readr   1.3.1     ✓ forcats 0.5.0&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ── Conflicts ──────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dat &amp;lt;- get_afltables_stats(&amp;quot;2018-01-01&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Returning data from 2018-01-01 to 2020-07-20&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Downloading data&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Finished downloading data. Processing XMLs&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Finished getting afltables data&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tail(dat)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 59
+##   Season Round Date       Local.start.time Venue Attendance Home.team  HQ1G
+##    &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;date&amp;gt;                &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;     &amp;lt;int&amp;gt;
+## 1   2020 6     2020-07-12              645 Carr…         NA Carlton       5
+## 2   2020 6     2020-07-12              645 Carr…         NA Carlton       5
+## 3   2020 6     2020-07-12              645 Carr…         NA Carlton       5
+## 4   2020 6     2020-07-12              645 Carr…         NA Carlton       5
+## 5   2020 6     2020-07-12              645 Carr…         NA Carlton       5
+## 6   2020 6     2020-07-12              645 Carr…         NA Carlton       5
+## # … with 51 more variables: HQ1B &amp;lt;int&amp;gt;, HQ2G &amp;lt;int&amp;gt;, HQ2B &amp;lt;int&amp;gt;, HQ3G &amp;lt;int&amp;gt;,
+## #   HQ3B &amp;lt;int&amp;gt;, HQ4G &amp;lt;int&amp;gt;, HQ4B &amp;lt;int&amp;gt;, Home.score &amp;lt;int&amp;gt;, Away.team &amp;lt;chr&amp;gt;,
+## #   AQ1G &amp;lt;int&amp;gt;, AQ1B &amp;lt;int&amp;gt;, AQ2G &amp;lt;int&amp;gt;, AQ2B &amp;lt;int&amp;gt;, AQ3G &amp;lt;int&amp;gt;, AQ3B &amp;lt;int&amp;gt;,
+## #   AQ4G &amp;lt;int&amp;gt;, AQ4B &amp;lt;int&amp;gt;, Away.score &amp;lt;int&amp;gt;, First.name &amp;lt;chr&amp;gt;, Surname &amp;lt;chr&amp;gt;,
+## #   ID &amp;lt;dbl&amp;gt;, Jumper.No. &amp;lt;dbl&amp;gt;, Playing.for &amp;lt;chr&amp;gt;, Kicks &amp;lt;dbl&amp;gt;, Marks &amp;lt;dbl&amp;gt;,
+## #   Handballs &amp;lt;dbl&amp;gt;, Goals &amp;lt;dbl&amp;gt;, Behinds &amp;lt;dbl&amp;gt;, Hit.Outs &amp;lt;dbl&amp;gt;, Tackles &amp;lt;dbl&amp;gt;,
+## #   Rebounds &amp;lt;dbl&amp;gt;, Inside.50s &amp;lt;dbl&amp;gt;, Clearances &amp;lt;dbl&amp;gt;, Clangers &amp;lt;dbl&amp;gt;,
+## #   Frees.For &amp;lt;dbl&amp;gt;, Frees.Against &amp;lt;dbl&amp;gt;, Brownlow.Votes &amp;lt;dbl&amp;gt;,
+## #   Contested.Possessions &amp;lt;dbl&amp;gt;, Uncontested.Possessions &amp;lt;dbl&amp;gt;,
+## #   Contested.Marks &amp;lt;dbl&amp;gt;, Marks.Inside.50 &amp;lt;dbl&amp;gt;, One.Percenters &amp;lt;dbl&amp;gt;,
+## #   Bounces &amp;lt;dbl&amp;gt;, Goal.Assists &amp;lt;dbl&amp;gt;, Time.on.Ground.. &amp;lt;dbl&amp;gt;,
+## #   Substitute &amp;lt;int&amp;gt;, Umpire.1 &amp;lt;chr&amp;gt;, Umpire.2 &amp;lt;chr&amp;gt;, Umpire.3 &amp;lt;chr&amp;gt;,
+## #   Umpire.4 &amp;lt;chr&amp;gt;, group_id &amp;lt;int&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that each row is a ‘player match’ so the first few columns are just repeated team level data. It is probably more intersting to look at specific columns relating to player stats.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dat %&amp;gt;% 
+  select(Date, First.name, Surname, Playing.for, Contested.Possessions, 
+         Uncontested.Possessions, One.Percenters, Time.on.Ground.., 
+         Brownlow.Votes)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 20,548 x 9
+##    Date       First.name Surname Playing.for Contested.Posse… Uncontested.Pos…
+##    &amp;lt;date&amp;gt;     &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;   &amp;lt;chr&amp;gt;                  &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;
+##  1 2018-03-22 David      Astbury Richmond                   9                8
+##  2 2018-03-22 Shai       Bolton  Richmond                   3                3
+##  3 2018-03-22 Dan        Butler  Richmond                   7                6
+##  4 2018-03-22 Josh       Caddy   Richmond                  11               10
+##  5 2018-03-22 Jason      Castag… Richmond                   7                8
+##  6 2018-03-22 Reece      Conca   Richmond                   6               10
+##  7 2018-03-22 Trent      Cotchin Richmond                  13               12
+##  8 2018-03-22 Shane      Edwards Richmond                   9                7
+##  9 2018-03-22 Brandon    Ellis   Richmond                   3               14
+## 10 2018-03-22 Corey      Ellis   Richmond                   7                6
+## # … with 20,538 more rows, and 3 more variables: One.Percenters &amp;lt;dbl&amp;gt;,
+## #   Time.on.Ground.. &amp;lt;dbl&amp;gt;, Brownlow.Votes &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;That’s about it. The the rest of the changes are just bug fixes which you can see in the &lt;a href=&#34;https://jimmyday12.github.io/fitzRoy/news/index.html&#34;&gt;NEWS page of the packages website&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Hit us up on Twitter at &lt;a href=&#34;https://twitter.com/plusSixOneblog&#34;&gt;plusSixOneBlog&lt;/a&gt; &lt;a href=&#34;https://twitter.com/anoafl&#34;&gt;anoafl&lt;/a&gt; or over on &lt;a href=&#34;https://github.com/jimmyday12/fitzRoy&#34;&gt;Github&lt;/a&gt; if you have any feedback or issues! Enjoy.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>

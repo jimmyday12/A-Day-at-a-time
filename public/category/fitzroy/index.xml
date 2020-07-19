@@ -1,29 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts | A Day at a time</title>
-    <link>/post/</link>
-      <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
-    <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 02 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <title>fitzroy | A Day at a time</title>
+    <link>/category/fitzroy/</link>
+      <atom:link href="/category/fitzroy/index.xml" rel="self" type="application/rss+xml" />
+    <description>fitzroy</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 15 Aug 2018 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
-      <title>Posts</title>
-      <link>/post/</link>
+      <title>fitzroy</title>
+      <link>/category/fitzroy/</link>
     </image>
-    
-    <item>
-      <title>fitzRoy is now on CRAN!</title>
-      <link>/post/fitzroy-is-now-on-cran/</link>
-      <pubDate>Mon, 02 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>/post/fitzroy-is-now-on-cran/</guid>
-      <description>
-
-
-&lt;p&gt;Just a quick note to confirm that fitzRoy is now on CRAN! You can see it &lt;a href=&#34;https://cran.r-project.org/web/packages/fitzRoy/index.html&#34;&gt;here&lt;/a&gt;. Release notes for this v0.2.0 can be seen &lt;a href=&#34;https://jimmyday12.github.io/fitzRoy/news/index.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Make sure you read the &lt;a href=&#34;https://jimmyday12.github.io/fitzRoy/articles/mens-stats.html&#34;&gt;getting started guide&lt;/a&gt; and reach out on github if you have any feedback!&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title>fitzRoy - 0.1.5 release</title>
