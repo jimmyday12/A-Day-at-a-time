@@ -19,33 +19,34 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
 [[item]]
-  organization = "Coursera"
-  organization_url = "https://www.coursera.org"
-  title = "Neural Networks and Deep Learning"
-  url = ""
-  certificate_url = "https://www.coursera.org"
-  date_start = "2018-10-01"
+  organization = "RMIT Future Skills"
+  organization_url = "https://online.rmit.edu.au/"
+  title = "Product Management"
+  url = "https://online.rmit.edu.au/course/sc-product-management-dtr102"
+  certificate_url = ""
+  date_start = "2020-05-04"
   date_end = ""
-  description = ""
+  description = "Learn how to create value through scalable solutions and drive business success from some of the best employers in industry."
 
-[[item]]
-  organization = "edX"
-  organization_url = "https://www.edx.org"
-  title = "Blockchain Fundamentals"
-  url = "https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals"
-  certificate_url = "https://www.edx.org"
-  date_start = "2018-03-01"
-  date_end = ""
-  description = "Formulated informed blockchain models, hypotheses, and use cases."
-  
 [[item]]
   organization = "DataCamp"
   organization_url = "https://www.datacamp.com"
-  title = "Object-Oriented Programming in R: S3 and R6 Course"
-  url = ""
-  certificate_url = "https://www.datacamp.com"
-  date_start = "2017-07-01"
-  date_end = "2017-12-21"
-  description = ""
+  title = "Intermediate R"
+  url = "https://learn.datacamp.com/courses/intermediate-r"
+  certificate_url = "https://www.datacamp.com/statement-of-accomplishment/course/828997a532beaeb6e9446b6bb2f2eba15ecec1ec"
+  date_start = "2019-06-21"
+  date_end = "2019-06-21"
+  description = "master the basics of this widely used open source language, including factors, lists, and data frames"
+
+[[item]]
+  organization = "DataCamp"
+  organization_url = "https://www.datacamp.com"
+  title = "Introduction to R"
+  url = "https://learn.datacamp.com/courses/free-introduction-to-r"
+  certificate_url = "https://www.datacamp.com/statement-of-accomplishment/course/fec2115c02d3e2435d249113e09e3aa3fb9b3a6d"
+  date_start = "2016-03-31"
+  date_end = "2016-03-31"
+  description = "master the basics of this widely used open source language, including factors, lists, and data frames"
+
 
 +++
