@@ -21,16 +21,35 @@ subtitle = ""
   description = "90%"
   
 [[feature]]
+  icon = "python"
+  icon_pack = "fab"
+  name = "Python"
+  description = "20%" 
+  
+[[feature]]
+  icon = "github"
+  icon_pack = "fab"
+  name = "Git and Github"
+  description = "60%" 
+
+[[feature]]
+  icon = "atlassian"
+  icon_pack = "fab"
+  name = "JIRA and Confluence"
+  description = "100%" 
+
+  
+[[feature]]
   icon = "chart-line"
   icon_pack = "fas"
   name = "Statistics"
-  description = "100%"  
+  description = "50%"  
   
 [[feature]]
-  icon = "camera-retro"
+  icon = "project-diagram"
   icon_pack = "fas"
-  name = "Photography"
-  description = "10%"
+  name = "Product Management"
+  description = "70%"
 
 # Uncomment to use emoji icons.
 # [[feature]]
