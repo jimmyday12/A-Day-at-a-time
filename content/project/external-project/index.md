@@ -1,11 +1,19 @@
 ---
-date: "2016-04-27T00:00:00Z"
-external_link: http://example.org
+date: "2020-07-19T00:00:00Z"
+external_link: 
 image:
-  caption: Photo by Toa Heftiba on Unsplash
+  caption: Easily Access AFL Data
   focal_point: Smart
-summary: An example of linking directly to an external project website using `external_link`.
+summary: The goal of fitzRoy is to provide a set of functions that allows for users to easily get access to AFL data from sources such as afltables.com and footywire.com. There are also tools for processing and cleaning that data.
 tags:
-- Demo
-title: External Project
+- Open Source
+title: fitzRoy
+links:
+- icon: github
+  icon_pack: fab
+  name: Follow
+  url: https://github.com/jimmyday12/fitzRoy
 ---
+
+https://jimmyday12.github.io/fitzRoy/
+
