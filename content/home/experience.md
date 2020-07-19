@@ -18,27 +18,61 @@ date_format = "Jan 2006"
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
-  title = "CEO"
-  company = "GenCoin"
-  company_url = ""
-  location = "California"
-  date_start = "2017-01-01"
+  title = "Senior Product Manager"
+  company = "Fusion Sport"
+  company_url = "www.fusionsport.com"
+  location = "Australia"
+  date_start = "2020-06-01"
   date_end = ""
-  description = """
-  Responsibilities include:
-  
-  * Analysing
-  * Modelling
-  * Deploying
-  """
+  description = ""
 
 [[experience]]
-  title = "Professor"
-  company = "University X"
+  title = "Senior Project Manager"
+  company = "Fusion Sport"
+  company_url = "www.fusionsport.com"
+  location = "Australia"
+  date_start = "2019-06-01"
+  date_end = "2020-05-01"
+  description = "Responsible for the planning and overseeing of various cross-functional development projects to ensure they were completed in a timely fashion and within budget."
+  
+[[experience]]
+  title = "Manager of Research and Analytics"
+  company = "Fusion Sport"
+  company_url = "www.fusionsport.com"
+  location = "Australia"
+  date_start = "2016-07-01"
+  date_end = "2019-06-01"
+  description = "Leading a small team to conduct internal and external research and analytics to assist the development of various new R&D projects at Fusion Sport"
+  
+[[experience]]
+  title = "Research Consultant (Biomechanics and Data Analytics)"
+  company = "Fusion Sport"
+  company_url = "www.fusionsport.com"
+  location = "Australia"
+  date_start = "2014-07-01"
+  date_end = "2016-06-01"
+  description = "Research into various new technologies and processes as part of the R&D arm of fusion sport. Including wearables technology, data analytics tools and analyses techniques for existing products."
+
+[[experience]]
+  title = "Sports Science Consultant"
+  company = "Fusion Sport"
+  company_url = "www.fusionsport.com"
+  location = "Australia"
+  date_start = "2011-01-01"
+  date_end = "2014-07-01"
+  description = "Working with clients to implement various sports science tools such as an Athlete Management System across their organisations"
+
+
+[[experience]]
+  title = "Course Co-ordinator and tutor"
+  company = "The University of Queensland"
   company_url = ""
-  location = "California"
-  date_start = "2016-01-01"
-  date_end = "2016-12-31"
-  description = """Taught electronic engineering and researched semiconductor physics."""
+  location = "Brisbane"
+  date_start = "2011-01-01"
+  date_end = "2015-01-01"
+  description = "Co-ordinated undergraduate courses in Biomechanics, Motor Control and Neuromechanics, as well as tutoring."
+
+
+
 
 +++
